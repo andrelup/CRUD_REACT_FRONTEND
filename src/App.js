@@ -60,12 +60,12 @@ class App extends Component {
     event.preventDefault();
     this.setState({ authLoading: true });
     fetch('http://localhost:8080/auth/login', {
-      'method': 'POST',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       }, body: JSON.stringify({
         email: authData.email,
-        password: authData.password,
+        password: authData.password
       })
     }).then(res => {
         if (res.status === 422) {
@@ -111,7 +111,7 @@ class App extends Component {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
-      }, 
+      },
       body: JSON.stringify({
         email: authData.signupForm.email.value,
         password: authData.signupForm.password.value,
