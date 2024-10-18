@@ -17,7 +17,7 @@ class SinglePost extends Component {
     const graphqlQuery = {
       query: `
         {
-          post(postId: "${postId}") {
+          post(id: "${postId}") {
             _id
             title
             content
